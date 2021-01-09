@@ -17,6 +17,8 @@ class App extends Component {
       <div className="App">
         <h1>Hello world!</h1>
         <Person />
+        <Person />
+        <Person />
       </div>
     );
     // return React.createElement(

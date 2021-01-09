@@ -1,12 +1,14 @@
 import React from "react";
 
-const Person = () => {
+const person = () => {
   return (
     <>
-      <h1>What do you want?</h1>
-      <p>Everything is just working fine</p>
+      <h1>I'm a person and I am {Math.floor(Math.random() * 30)} years old!</h1>
+      <p>Everything is working just fine!</p>
     </>
   );
 };
 
-export default Person;
+// console.log(Math.ceil(Math.random() * 30));
+
+export default person;
