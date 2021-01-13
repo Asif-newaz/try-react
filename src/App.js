@@ -2,10 +2,8 @@
 import "./App.css";
 import React, { Component, createElement } from "react";
 import Person from "./Person/Person";
-// import makeStyles from '@material-ui/core/styles/makeStyles';
-import TextField from "@material-ui/core/TextField";
-import Autocomplete from "@material-ui/lab/Autocomplete";
-import Grouped from "./AreaSelect/AreaSelect";
+// import TextField from "@material-ui/core/TextField";
+// import Autocomplete from "@material-ui/lab/Autocomplete";
 
 // function App() {
 //   return (
@@ -52,7 +50,15 @@ class App extends Component {
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
         />
-        <Grouped />
+        {/* <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          getOptionLabel={(option) => option.title}
+          style={{ width: 300 }}
+          renderInput={(params) => (
+            <TextField {...params} label="Combo box" variant="outlined" />
+          )}
+        /> */}
       </div>
     );
 
