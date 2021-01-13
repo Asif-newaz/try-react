@@ -1,7 +1,11 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import React, { Component, createElement } from "react";
 import Person from "./Person/Person";
+// import makeStyles from '@material-ui/core/styles/makeStyles';
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import Grouped from "./AreaSelect/AreaSelect";
 
 // function App() {
 //   return (
@@ -23,7 +27,7 @@ class App extends Component {
   switchNameHandler = () => {
     // console.log("was clicked!");
     this.state.persons[0].name = "Asif Newaz";
-  }
+  };
 
   //Working with state
   render() {
@@ -32,16 +36,28 @@ class App extends Component {
         <h1>Hello world!</h1>
         <p>This is really working!</p>
         <button onClick={this.switchNameHandler}>Switch Name</button>
-        <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>
+        <Person
+          name={this.state.persons[0].name}
+          age={this.state.persons[0].age}
+        >
           <a href="#">Click Me!</a>
         </Person>
-        <Person name = {this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies: Racing</Person>
-        <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+        <Person
+          name={this.state.persons[1].name}
+          age={this.state.persons[1].age}
+        >
+          My Hobbies: Racing
+        </Person>
+        <Person
+          name={this.state.persons[2].name}
+          age={this.state.persons[2].age}
+        />
+        <Grouped />
       </div>
     );
 
-  // Working with props
-  /*
+    // Working with props
+    /*
   render() {
     return (
       <div className="App">
