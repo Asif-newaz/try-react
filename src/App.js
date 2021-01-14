@@ -1,9 +1,10 @@
 // import logo from "./logo.svg";
 import "./App.css";
-import React, { Component, createElement } from "react";
+import React, { Component } from "react";
 import Person from "./Person/Person";
-// import TextField from "@material-ui/core/TextField";
-// import Autocomplete from "@material-ui/lab/Autocomplete";
+// import { Button } from "@material-ui/core";
+// import { Autocomplete } from "@material-ui/lab";
+// import TextField from '@material-ui/core/TextField';
 
 // function App() {
 //   return (
@@ -16,15 +17,24 @@ import Person from "./Person/Person";
 class App extends Component {
   state = {
     persons: [
-      { name: "Asif", age: 20 },
+      { name: "Asif", age: 26 },
       { name: "Max", age: 30 },
       { name: "Jonas", age: 31 },
     ],
+
+    otherState: "Some other value",
   };
 
   switchNameHandler = () => {
-    // console.log("was clicked!");
-    this.state.persons[0].name = "Asif Newaz";
+    console.log("was clicked!");
+    //DON'T DO THIS: this.state.persons[1].name = "Asif Newaz";
+    this.setState( {
+        persons: [
+          { name: "Asif Newaz", age: 27 },
+          { name: "Max", age: 30 },
+          { name: "Jonas", age: 31 },
+        ]
+      } )
   };
 
   //Working with state
@@ -50,6 +60,10 @@ class App extends Component {
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
         />
+        {/* <Button color="secondary" disabled={false}>
+          Hello World
+        </Button> */}
+
         {/* <Autocomplete
           id="combo-box-demo"
           options={top100Films}
