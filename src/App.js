@@ -1,5 +1,5 @@
 // import React, { Component } from "react";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Person from "./Person/Person";
 import { Button } from "@material-ui/core";
@@ -8,22 +8,41 @@ import { Button } from "@material-ui/core";
 // import TextField from '@material-ui/core/TextField';
 
 // Functional component
-const app = () => {
+const App = (props) => {
+  const [personState, setPersonState] = useState({
+    persons: [
+      { name: "Asif", age: 26 },
+      { name: "Max", age: 30 },
+      { name: "Jonas", age: 31 },
+    ],
+
+    otherState: "Some other value",
+  });
+
+  const switchNameHandler = () => {
+    // console.log("Was clicked!");
+    //DON'T DO THIS: this.state.persons[1].name = "Asif Newaz";
+    setPersonState({
+      persons: [
+        { name: "Asif Newaz", age: 27 },
+        { name: "Max", age: 30 },
+        { name: "Jonas", age: 31 },
+      ],
+    });
+  };
+
   return (
     <div className="App">
       <h1>Hello world!</h1>
       <p>This is really working!</p>
-      <button onClick={this.switchNameHandler}>Switch Name</button>
-      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>
+      <button onClick={switchNameHandler}>Switch Name</button>
+      <Person name={personState.name} age={personState.age}>
         <a href="#">Click Me!</a>
       </Person>
-      <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
+      <Person name={personState.name} age={personState.age}>
         My Hobbies: Racing
       </Person>
-      <Person
-        name={this.state.persons[2].name}
-        age={this.state.persons[2].age}
-      />
+      <Person name={personState.name} age={personState.age} />
       <Button color="secondary" disabled={false}>
         Hello World
       </Button>
@@ -68,7 +87,7 @@ const app = () => {
     */
 };
 
-export default app;
+export default App;
 
 // Class based component
 /*
@@ -90,6 +109,7 @@ class App extends Component {
       persons: [
         { name: "Asif Newaz", age: 27 },
         { name: "Max", age: 30 },
+        { name: "Jonas", age: 31 },
       ],
     });
   };
