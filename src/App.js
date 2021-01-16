@@ -9,7 +9,7 @@ import { Button } from "@material-ui/core";
 
 // Functional component
 const App = (props) => {
-  const [personState, setPersonState] = useState({
+  const [personsState, setPersonsState] = useState({
     persons: [
       { name: "Asif", age: 26 },
       { name: "Max", age: 30 },
@@ -19,13 +19,14 @@ const App = (props) => {
     otherState: "Some other value",
   });
 
+  console.log(personsState);
+  
+
   const switchNameHandler = () => {
-    // console.log("Was clicked!");
-    //DON'T DO THIS: this.state.persons[1].name = "Asif Newaz";
-    setPersonState({
+    setPersonsState({
       persons: [
         { name: "Asif Newaz", age: 27 },
-        { name: "Max", age: 30 },
+        { name: "Maximillian", age: 30 },
         { name: "Jonas", age: 31 },
       ],
     });
@@ -35,14 +36,19 @@ const App = (props) => {
     <div className="App">
       <h1>Hello world!</h1>
       <p>This is really working!</p>
+
       <button onClick={switchNameHandler}>Switch Name</button>
-      <Person name={personState.name} age={personState.age}>
+
+      <Person name={personsState.persons[0].name} age={personsState.persons[0].age}>
         <a href="#">Click Me!</a>
       </Person>
-      <Person name={personState.name} age={personState.age}>
+
+      <Person name={personsState.persons[1].name} age={personsState.persons[1].age}>
         My Hobbies: Racing
       </Person>
-      <Person name={personState.name} age={personState.age} />
+
+      <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
+
       <Button color="secondary" disabled={false}>
         Hello World
       </Button>
