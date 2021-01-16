@@ -2,13 +2,14 @@
 import React, { useState } from "react";
 import "./App.css";
 import Person from "./Person/Person";
+import StyledComp from "./StyledCompTest/index";
 import { Button } from "@material-ui/core";
 // import logo from "./logo.svg";
 // import { Autocomplete } from "@material-ui/lab";
 // import TextField from '@material-ui/core/TextField';
 
 // Functional component
-const App = (props) => {
+function App(props) {
   const [personsState, setPersonsState] = useState({
     persons: [
       { name: "Asif", age: 26 },
@@ -20,7 +21,7 @@ const App = (props) => {
   });
 
   console.log(personsState);
-  
+
 
   const switchNameHandler = () => {
     setPersonsState({
@@ -34,6 +35,7 @@ const App = (props) => {
 
   return (
     <div className="App">
+      <StyledComp />
       <h1>Hello world!</h1>
       <p>This is really working!</p>
 
@@ -44,7 +46,7 @@ const App = (props) => {
       </Person>
 
       <Person name={personsState.persons[1].name} age={personsState.persons[1].age}>
-        My Hobbies: Racing
+          My Hobbies: Racing
       </Person>
 
       <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
@@ -53,15 +55,6 @@ const App = (props) => {
         Hello World
       </Button>
 
-      {/* <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          getOptionLabel={(option) => option.title}
-          style={{ width: 300 }}
-          renderInput={(params) => (
-            <TextField {...params} label="Combo box" variant="outlined" />
-          )}
-        /> */}
     </div>
   );
 
@@ -82,7 +75,6 @@ const App = (props) => {
     </div>
   );
   */
-
   // How JSX actually works
   /*
     return React.createElement(
@@ -91,7 +83,7 @@ const App = (props) => {
       React.createElement("h1", null, "Hi, I'm a React App")
     );
     */
-};
+}
 
 export default App;
 
