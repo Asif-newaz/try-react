@@ -1,19 +1,77 @@
-// import logo from "./logo.svg";
+// import React, { Component } from "react";
+import React, {useState} from "react";
 import "./App.css";
-import React, { Component } from "react";
 import Person from "./Person/Person";
-// import { Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+// import logo from "./logo.svg";
 // import { Autocomplete } from "@material-ui/lab";
 // import TextField from '@material-ui/core/TextField';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <h1>Hi, I am a React App</h1>
-//     </div>
-//   );
-// }
+// Functional component
+const app = () => {
+  return (
+    <div className="App">
+      <h1>Hello world!</h1>
+      <p>This is really working!</p>
+      <button onClick={this.switchNameHandler}>Switch Name</button>
+      <Person name={this.state.persons[0].name} age={this.state.persons[0].age}>
+        <a href="#">Click Me!</a>
+      </Person>
+      <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
+        My Hobbies: Racing
+      </Person>
+      <Person
+        name={this.state.persons[2].name}
+        age={this.state.persons[2].age}
+      />
+      <Button color="secondary" disabled={false}>
+        Hello World
+      </Button>
 
+      {/* <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          getOptionLabel={(option) => option.title}
+          style={{ width: 300 }}
+          renderInput={(params) => (
+            <TextField {...params} label="Combo box" variant="outlined" />
+          )}
+        /> */}
+    </div>
+  );
+
+  // Working with props
+  /*
+  return (
+    <div className="App">
+      <h1>Hello world!</h1>
+      <p>This is really working!</p>
+      <button>Switch Name</button>
+      <Person name="Asif" age="26">
+        <a href="#">Click Me!</a>
+      </Person>
+      <Person name="Max" age="30">
+        My Hobbies: Racing
+      </Person>
+      <Person name="Jonas" age="31" />
+    </div>
+  );
+  */
+
+  // How JSX actually works
+  /*
+    return React.createElement(
+      "div",
+      {className: App},
+      React.createElement("h1", null, "Hi, I'm a React App")
+    );
+    */
+};
+
+export default app;
+
+// Class based component
+/*
 class App extends Component {
   state = {
     persons: [
@@ -28,13 +86,12 @@ class App extends Component {
   switchNameHandler = () => {
     console.log("was clicked!");
     //DON'T DO THIS: this.state.persons[1].name = "Asif Newaz";
-    this.setState( {
-        persons: [
-          { name: "Asif Newaz", age: 27 },
-          { name: "Max", age: 30 },
-          { name: "Jonas", age: 31 },
-        ]
-      } )
+    this.setState({
+      persons: [
+        { name: "Asif Newaz", age: 27 },
+        { name: "Max", age: 30 },
+      ],
+    });
   };
 
   //Working with state
@@ -60,50 +117,36 @@ class App extends Component {
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
         />
-        {/* <Button color="secondary" disabled={false}>
+        <Button color="secondary" disabled={false}>
           Hello World
-        </Button> */}
-
-        {/* <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          getOptionLabel={(option) => option.title}
-          style={{ width: 300 }}
-          renderInput={(params) => (
-            <TextField {...params} label="Combo box" variant="outlined" />
-          )}
-        /> */}
+        </Button>
       </div>
     );
-
-    // Working with props
-    /*
-  render() {
-    return (
-      <div className="App">
-        <h1>Hello world!</h1>
-        <p>This is really working!</p>
-        <button>Switch Name</button>
-        <Person name="Asif" age="26">
-          <a href="#">Click Me!</a>
-        </Person>
-        <Person name="Max" age="30">
-          My Hobbies: Racing
-        </Person>
-        <Person name="Jonas" age="31" />
-      </div>
-    );
-    */
-
-    // How JSX actually works
-    /*
-    return React.createElement(
-      "div",
-      {className: App},
-      React.createElement("h1", null, "Hi, I'm a React App")
-    );
-    */
   }
+  // Working with props
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       <h1>Hello world!</h1>
+  //       <p>This is really working!</p>
+  //       <button>Switch Name</button>
+  //       <Person name="Asif" age="26">
+  //         <a href="#">Click Me!</a>
+  //       </Person>
+  //       <Person name="Max" age="30">
+  //         My Hobbies: Racing
+  //       </Person>
+  //       <Person name="Jonas" age="31" />
+  //     </div>
+  //   );
+
+  // How JSX actually works
+  // return React.createElement(
+  //   "div",
+  //   {className: App},
+  //   React.createElement("h1", null, "Hi, I'm a React App")
+  // );
 }
 
 export default App;
+*/
