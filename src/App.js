@@ -36,7 +36,7 @@ function App(props) {
   return (
     <div className="App">
       <StyledComp />
-      <h1>Hello world!</h1>
+      {/* <h1>Hello world!</h1>
       <p>This is really working!</p>
 
       <button onClick={switchNameHandler}>Switch Name</button>
@@ -53,7 +53,7 @@ function App(props) {
 
       <Button color="secondary" disabled={false}>
         Hello World
-      </Button>
+      </Button> */}
 
     </div>
   );

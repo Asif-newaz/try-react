@@ -1,13 +1,35 @@
-import React from 'react';
-import Wrapper from './styledCompTest.style';
-import Title from './styledCompTest.style';
+import React from "react";
+import Wrapper from "./styledCompTest.style";
+import { Title } from "./styledCompTest.style";
+import { SomeText } from "./styledCompTest.style";
 
- const styledCompTest = () => {
-     return (
-         <Wrapper>
-             <Title>Hello Mac, this is my first styled component!</Title>
-         </Wrapper>
-     )
- }
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
- export default styledCompTest;
+const styledCompTest = () => {
+  return (
+    <Wrapper>
+      <Title>Hello Mac, this is my first styled component!</Title>
+      <SomeText>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+        suscipit minus totam! Delectus non quam mollitia ullam? Soluta
+        asperiores eaque aspernatur tempore sed, quos eveniet culpa, provident
+        recusandae quis suscipit.
+      </SomeText>
+      <div className="nav">
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+        <figure>
+          <FontAwesomeIcon icon={faCoffee} />
+        </figure>
+      </div>
+    </Wrapper>
+  );
+};
+
+export default styledCompTest;
