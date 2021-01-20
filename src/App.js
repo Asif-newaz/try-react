@@ -4,6 +4,8 @@ import "./App.css";
 import Person from "./Person/Person";
 import StyledComp from "./StyledCompTest/index";
 import { Button } from "@material-ui/core";
+import AgeRestrictions from "./components/AgeRestriction/index";
+import HamburgerMenu from "./components/HamburgerMenu/index";
 // import logo from "./logo.svg";
 // import { Autocomplete } from "@material-ui/lab";
 // import TextField from '@material-ui/core/TextField';
@@ -22,7 +24,6 @@ function App(props) {
 
   console.log(personsState);
 
-
   const switchNameHandler = () => {
     setPersonsState({
       persons: [
@@ -35,6 +36,8 @@ function App(props) {
 
   return (
     <div className="App">
+      {/* <AgeRestrictions /> */}
+      {/* <HamburgerMenu /> */}
       <StyledComp />
       {/* <h1>Hello world!</h1>
       <p>This is really working!</p>
@@ -54,7 +57,6 @@ function App(props) {
       <Button color="secondary" disabled={false}>
         Hello World
       </Button> */}
-
     </div>
   );
 
