@@ -1,7 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin: 1rem;
+  max-width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #000000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .nav {
     background-color: goldenrod;
