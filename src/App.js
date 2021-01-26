@@ -1,8 +1,8 @@
 // import React, { Component } from "react";
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 // import Person from "./Person/Person";
-import StyledComp from "./StyledCompTest/index";
+import MyFullHeightComponent from "./StyledCompTest/index";
 // import { Button } from "@material-ui/core";
 // import AgeRestrictions from "./components/AgeRestriction/index";
 // import HamburgerMenu from "./components/HamburgerMenu/index";
@@ -38,7 +38,7 @@ function App(props) {
     <div className="App">
       {/* <AgeRestrictions /> */}
       {/* <HamburgerMenu /> */}
-      <StyledComp />
+      <MyFullHeightComponent />
       {/* <h1>Hello world!</h1>
       <p>This is really working!</p>
 
