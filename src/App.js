@@ -1,40 +1,52 @@
 // import React, { Component } from "react";
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Person from "./Person/Person";
+// import Person from "./Person/Person";
 // import { Button } from "@material-ui/core";
 // import logo from "./logo.svg";
 // import { Autocomplete } from "@material-ui/lab";
 // import TextField from '@material-ui/core/TextField';
+import Nav from "./components/Twitter/Nav";
+import Tweets from "./components/Twitter/Tweets";
 
 // Functional component
-function App(props) {
-  const [personsState, setPersonsState] = useState({
-    persons: [
-      { name: "Asif", age: 26 },
-      { name: "Max", age: 30 },
-      { name: "Jonas", age: 31 },
-    ],
+function App() {
 
-    otherState: "Some other value",
-  });
+  const name = "developedByAsif";
+  const age = "26";
 
-  console.log(personsState);
+  // const [personsState, setPersonsState] = useState({
+  //   persons: [
+  //     { name: "Asif", age: 26 },
+  //     { name: "Max", age: 30 },
+  //     { name: "Jonas", age: 31 },
+  //   ],
 
-  const switchNameHandler = () => {
-    setPersonsState({
-      persons: [
-        { name: "Asif Newaz", age: 27 },
-        { name: "Maximillian", age: 30 },
-        { name: "Jonas", age: 31 },
-      ],
-    });
-  };
+  //   otherState: "Some other value",
+  // });
+
+  // console.log(personsState);
+
+  // const switchNameHandler = () => {
+  //   setPersonsState({
+  //     persons: [
+  //       { name: "Asif Newaz", age: 27 },
+  //       { name: "Maximillian", age: 30 },
+  //       { name: "Jonas", age: 31 },
+  //     ],
+  //   });
+  // };
 
   // Working with state
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      <h1>Hello React!</h1>
+      <div className="home">
+        <Nav />
+        <Tweets me={name} age={age} />
+      </div>
+      {/* <h1>Hello world!</h1>
       <p>This is really working!</p>
 
       <button onClick={switchNameHandler}>Switch Name</button>
@@ -56,7 +68,7 @@ function App(props) {
       <Person
         name={personsState.persons[2].name}
         age={personsState.persons[2].age}
-      />
+      /> */}
     </div>
   );
 
