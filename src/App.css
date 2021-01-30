@@ -1,8 +1,5 @@
 .App {
-  text-align: center;
-  padding-top: 1rem;
-  background-color: #eeeeee;
-  height: 100vh;
+  background: #fff;
 }
 
 *,
@@ -11,4 +8,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.home {
+  min-height: 100vh;
+  background-color: rgb(18, 15, 58);
+  color: white;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
