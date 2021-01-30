@@ -1,5 +1,5 @@
 // import React, { Component } from "react";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Person from "./Person/Person";
 // import { Button } from "@material-ui/core";
@@ -31,7 +31,7 @@ function App(props) {
     });
   };
 
-// Working with state
+  // Working with state
   return (
     <div className="App">
       <h1>Hello world!</h1>
@@ -39,15 +39,24 @@ function App(props) {
 
       <button onClick={switchNameHandler}>Switch Name</button>
 
-      <Person name={personsState.persons[0].name} age={personsState.persons[0].age}>
+      <Person
+        name={personsState.persons[0].name}
+        age={personsState.persons[0].age}
+      >
         <a href="#">Click Me!</a>
       </Person>
 
-      <Person name={personsState.persons[1].name} age={personsState.persons[1].age}>
-          My Hobbies: Racing
+      <Person
+        name={personsState.persons[1].name}
+        age={personsState.persons[1].age}
+      >
+        My Hobbies: Racing
       </Person>
 
-      <Person name={personsState.persons[2].name} age={personsState.persons[2].age} />
+      <Person
+        name={personsState.persons[2].name}
+        age={personsState.persons[2].age}
+      />
     </div>
   );
 
