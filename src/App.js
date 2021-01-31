@@ -7,15 +7,11 @@ import "./App.css";
 // import logo from "./logo.svg";
 // import { Autocomplete } from "@material-ui/lab";
 // import TextField from '@material-ui/core/TextField';
-import Nav from "./components/Twitter/Nav";
-import Tweets from "./components/Twitter/Tweets";
+// import Nav from "./components/TwitterProps/Nav";
+// import Tweets from "./components/TwitterProps/Tweets";
 
 // Functional component
 function App() {
-
-  const name = "developedByAsif";
-  const age = "26";
-
   // const [personsState, setPersonsState] = useState({
   //   persons: [
   //     { name: "Asif", age: 26 },
@@ -38,14 +34,22 @@ function App() {
   //   });
   // };
 
+  let counter = 0;
+
+  const increment = () => {
+    console.log(counter += 1);
+  }
+
+  increment();
+
   // Working with state
   return (
     <div className="App">
       <h1>Hello React!</h1>
-      <div className="home">
+      {/* <div className="home">
         <Nav />
-        <Tweets me={name} age={age} />
-      </div>
+        <Tweets />
+      </div> */}
       {/* <h1>Hello world!</h1>
       <p>This is really working!</p>
 
