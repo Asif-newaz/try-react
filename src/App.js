@@ -1,6 +1,6 @@
 // import React, { Component } from "react";
-// import React, { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
+// import React from "react";
 import "./App.css";
 // import Person from "./Person/Person";
 // import { Button } from "@material-ui/core";
@@ -9,6 +9,8 @@ import "./App.css";
 // import TextField from '@material-ui/core/TextField';
 // import Nav from "./components/TwitterProps/Nav";
 // import Tweets from "./components/TwitterProps/Tweets";
+import Nav from "./components/TwitterState/Nav";
+import Video from "./components/TwitterState/Video";
 
 // Functional component
 function App() {
@@ -34,18 +36,32 @@ function App() {
   //   });
   // };
 
-  let counter = 0;
+  const [counter, setCounter] = useState(0);
+  const [toggle, setToggle] = useState(true);
 
   const increment = () => {
-    console.log(counter += 1);
-  }
+    setCounter(counter + 1);
+  };
 
-  increment();
+  const reset = () => {
+    setCounter(0);
+  };
+
+  const toggler = () => {
+    setToggle((prev) => !prev);
+  };
 
   // Working with state
   return (
     <div className="App">
-      <h1>Hello React!</h1>
+      <Nav toggle={toggle}/>
+      <Video nr={counter} setToggle={toggler} />
+      {/* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
+
+      <button onClick={increment}>Click me to increment!</button>
+      <button onClick={reset}>Reset</button>
+
+      <button onClick={toggler}>Click me!</button> */}
       {/* <div className="home">
         <Nav />
         <Tweets />

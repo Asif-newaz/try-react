@@ -1,5 +1,6 @@
 .App {
   background: #fff;
+  padding: 1rem;
 }
 
 *,
@@ -18,4 +19,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+button {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.active {
+  opacity: 0;
+  transition: .5s ease-in-out;
 }
