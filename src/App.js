@@ -1,41 +1,44 @@
-// import React, { Component } from "react";
-import React, { useState } from "react";
+import React, { Component } from "react";
 // import React from "react";
+// import React, { useState } from "react";
 import "./App.css";
-// import Person from "./Person/Person";
-// import { Button } from "@material-ui/core";
 // import logo from "./logo.svg";
-// import { Autocomplete } from "@material-ui/lab";
-// import TextField from '@material-ui/core/TextField';
+import Person from "./Person/Person";
 // import Nav from "./components/TwitterProps/Nav";
 // import Tweets from "./components/TwitterProps/Tweets";
-import Nav from "./components/TwitterState/Nav";
-import Video from "./components/TwitterState/Video";
+// import Nav from "./components/TwitterState/Nav";
+// import Video from "./components/TwitterState/Video";
 
 // Functional component
-function App() {
-  // const [personsState, setPersonsState] = useState({
-  //   persons: [
-  //     { name: "Asif", age: 26 },
-  //     { name: "Max", age: 30 },
-  //     { name: "Jonas", age: 31 },
-  //   ],
 
-  //   otherState: "Some other value",
-  // });
+// function App() {
+  // Learnt { useState } functional state from Maximilian
+  /*
+  const [personsState, setPersonsState] = useState({
+    persons: [
+      { name: "Asif", age: 26 },
+      { name: "Max", age: 30 },
+      { name: "Jonas", age: 31 },
+    ],
 
-  // console.log(personsState);
+    otherState: "Some other value",
+  });
 
-  // const switchNameHandler = () => {
-  //   setPersonsState({
-  //     persons: [
-  //       { name: "Asif Newaz", age: 27 },
-  //       { name: "Maximillian", age: 30 },
-  //       { name: "Jonas", age: 31 },
-  //     ],
-  //   });
-  // };
+  console.log(personsState);
 
+  const switchNameHandler = () => {
+    setPersonsState({
+      persons: [
+        { name: "Asif Newaz", age: 27 },
+        { name: "Maximillian", age: 30 },
+        { name: "Jonas", age: 31 },
+      ],
+    });
+  };
+*/
+
+  // Learnt state from DevEd
+  /*
   const [counter, setCounter] = useState(0);
   const [toggle, setToggle] = useState(true);
 
@@ -50,23 +53,38 @@ function App() {
   const toggler = () => {
     setToggle((prev) => !prev);
   };
+*/
 
   // Working with state
-  return (
-    <div className="App">
-      <Nav toggle={toggle}/>
-      <Video nr={counter} setToggle={toggler} />
-      {/* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
+  // return (
+    // <div className="App">
+      {/* 
+      // These component used for learning state from DevEd
+      <Nav toggle={toggle} />
+      <Video nr={counter} setToggle={toggler} /> 
+      */}
+
+      {/* 
+      // This portion of code used for learning state from DevEd
+      <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
 
       <button onClick={increment}>Click me to increment!</button>
       <button onClick={reset}>Reset</button>
 
-      <button onClick={toggler}>Click me!</button> */}
-      {/* <div className="home">
-        <Nav />
-        <Tweets />
-      </div> */}
-      {/* <h1>Hello world!</h1>
+      <button onClick={toggler}>Click me!</button>
+       */}
+
+      {/*       
+      // These two components used for learning props from DevEd
+        <div className="home">
+          <Nav />
+          <Tweets />
+        </div>
+      */}
+
+      {/* 
+      // These components used for learning state from Maximilian
+      <h1>Hello world!</h1>
       <p>This is really working!</p>
 
       <button onClick={switchNameHandler}>Switch Name</button>
@@ -89,8 +107,8 @@ function App() {
         name={personsState.persons[2].name}
         age={personsState.persons[2].age}
       /> */}
-    </div>
-  );
+    // </div>
+  // );
 
   // Working with props
   /*
@@ -117,12 +135,11 @@ function App() {
       React.createElement("h1", null, "Hi, I'm a React App")
     );
     */
-}
+// }
 
-export default App;
+// export default App;
 
 // Class based component
-/*
 class App extends Component {
   state = {
     persons: [
@@ -169,9 +186,6 @@ class App extends Component {
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
         />
-        <Button color="secondary" disabled={false}>
-          Hello World
-        </Button>
       </div>
     );
   }
@@ -201,4 +215,4 @@ class App extends Component {
 }
 
 export default App;
-*/
+
