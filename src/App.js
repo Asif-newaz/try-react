@@ -2,8 +2,10 @@ import React, { Component } from "react";
 // import React from "react";
 // import React, { useState } from "react";
 import "./App.css";
-// import logo from "./logo.svg";
+
+// Components
 import Person from "./Person/Person";
+// import TestStyledComp from "./StyledCompTest/index";
 // import Nav from "./components/TwitterProps/Nav";
 // import Tweets from "./components/TwitterProps/Tweets";
 // import Nav from "./components/TwitterState/Nav";
@@ -12,8 +14,8 @@ import Person from "./Person/Person";
 // Functional component
 
 // function App() {
-  // Learnt { useState } functional state from Maximilian
-  /*
+// Learnt { useState } functional state from Maximilian
+/*
   const [personsState, setPersonsState] = useState({
     persons: [
       { name: "Asif", age: 26 },
@@ -37,8 +39,8 @@ import Person from "./Person/Person";
   };
 */
 
-  // Learnt state from DevEd
-  /*
+// Learnt state from DevEd
+/*
   const [counter, setCounter] = useState(0);
   const [toggle, setToggle] = useState(true);
 
@@ -55,16 +57,19 @@ import Person from "./Person/Person";
   };
 */
 
-  // Working with state
-  // return (
-    // <div className="App">
-      {/* 
+// Working with state
+// return (
+// <div className="App">
+{
+  /* 
       // These component used for learning state from DevEd
       <Nav toggle={toggle} />
       <Video nr={counter} setToggle={toggler} /> 
-      */}
+      */
+}
 
-      {/* 
+{
+  /* 
       // This portion of code used for learning state from DevEd
       <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
 
@@ -72,17 +77,21 @@ import Person from "./Person/Person";
       <button onClick={reset}>Reset</button>
 
       <button onClick={toggler}>Click me!</button>
-       */}
+       */
+}
 
-      {/*       
+{
+  /*       
       // These two components used for learning props from DevEd
         <div className="home">
           <Nav />
           <Tweets />
         </div>
-      */}
+      */
+}
 
-      {/* 
+{
+  /* 
       // These components used for learning state from Maximilian
       <h1>Hello world!</h1>
       <p>This is really working!</p>
@@ -106,12 +115,13 @@ import Person from "./Person/Person";
       <Person
         name={personsState.persons[2].name}
         age={personsState.persons[2].age}
-      /> */}
-    // </div>
-  // );
+      /> */
+}
+// </div>
+// );
 
-  // Working with props
-  /*
+// Working with props
+/*
   return (
     <div className="App">
       <h1>Hello world!</h1>
@@ -127,8 +137,8 @@ import Person from "./Person/Person";
     </div>
   );
   */
-  // How JSX actually works
-  /*
+// How JSX actually works
+/*
     return React.createElement(
       "div",
       {className: App},
@@ -215,4 +225,3 @@ class App extends Component {
 }
 
 export default App;
-

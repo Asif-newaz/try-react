@@ -6,7 +6,7 @@ import { SomeText } from "./styledCompTest.style";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
-const MyFullHeightComponent = () => {
+const TestStyledComp = () => {
   return (
     <Wrapper>
       <Title>Hello Mac, this is my first styled component!</Title>
@@ -32,4 +32,4 @@ const MyFullHeightComponent = () => {
   );
 };
 
-export default MyFullHeightComponent;
+export default TestStyledComp;

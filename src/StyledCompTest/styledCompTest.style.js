@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const WrapperBox = styled.div`
   max-width: 500px;
   height: 100vh;
   margin: 0 auto;
@@ -53,4 +53,4 @@ export const SomeText = styled.p`
   margin-bottom: 2rem;
 `;
 
-export default Wrapper;
+export default WrapperBox;
