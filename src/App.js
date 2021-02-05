@@ -159,6 +159,8 @@ class App extends Component {
     ],
 
     otherState: "Some other value",
+
+    country: "Bangladesh",
   };
 
   switchNameHandler = () => {
@@ -172,6 +174,8 @@ class App extends Component {
       ],
     });
   };
+
+  country = "Bangladesh";
 
   //Working with state
   render() {
@@ -195,6 +199,11 @@ class App extends Component {
         <Person
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
+        />
+        <Person
+          name={this.state.persons[2].name}
+          age={this.state.persons[2].age}
+          country={this.state.country}
         />
       </div>
     );

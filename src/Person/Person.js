@@ -15,6 +15,7 @@ class person extends Component {
        <>
        <h1>I'm {this.props.name} and I am {this.props.age} years old!</h1>
        <p>{this.props.children}</p>
+       <h3>{this.props.country}</h3>
        </>
     );
   }
