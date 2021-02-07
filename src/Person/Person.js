@@ -21,6 +21,14 @@ class person extends Component {
   }
 }
 
+export const OtherPerson = (props) => {
+  return(
+    <>
+      <h1>{props.country}</h1>
+    </>
+  )
+}
+
 // console.log(Math.ceil(Math.random() * 30));
 
 export default person;

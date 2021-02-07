@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import "./App.css";
 
 // Components
-import Person from "./Person/Person";
+import Person, { OtherPerson } from "./Person/Person";
 // import TestStyledComp from "./StyledCompTest/index";
 // import Nav from "./components/TwitterProps/Nav";
 // import Tweets from "./components/TwitterProps/Tweets";
@@ -160,7 +160,7 @@ class App extends Component {
 
     otherState: "Some other value",
 
-    country: "Bangladesh",
+    country: "Bangladesh is my homeland",
   };
 
   switchNameHandler = () => {
@@ -170,12 +170,14 @@ class App extends Component {
       persons: [
         { name: "Asif Newaz", age: 27 },
         { name: "Max", age: 30 },
-        { name: "Jonas", age: 31 },
+        { name: "Jonas", age: 32 },
       ],
-    });
-  };
 
-  country = "Bangladesh";
+      country: "I would like to go to the USA",
+    });
+
+    // this.setState({ persons: [{ name: "Asif Newaz", age: 27 }, {undefined}, {undefined}] });
+  };
 
   //Working with state
   render() {
@@ -183,7 +185,7 @@ class App extends Component {
       <div className="App">
         <h1>Hello world!</h1>
         <p>This is really working!</p>
-        <button onClick={this.switchNameHandler}>Switch Name</button>
+        <button onClick={this.switchNameHandler}>Update state!</button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
@@ -200,11 +202,7 @@ class App extends Component {
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
         />
-        <Person
-          name={this.state.persons[2].name}
-          age={this.state.persons[2].age}
-          country={this.state.country}
-        />
+        <OtherPerson country={this.state.country} />
       </div>
     );
   }
