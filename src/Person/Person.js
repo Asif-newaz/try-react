@@ -1,5 +1,5 @@
 import React, { Children, Component } from "react";
-
+import "./person.css";
 // const person = (props) => {
 //   return (
 //     <>
