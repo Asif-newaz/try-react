@@ -24,7 +24,8 @@ class person extends Component {
 export const OtherPerson = (props) => {
   return(
     <>
-      <h1>{props.country}</h1>
+      <h1>{props.otherState}</h1>
+      <button onClick={props.switchUpdateHandler}>Click me!</button>
     </>
   )
 }

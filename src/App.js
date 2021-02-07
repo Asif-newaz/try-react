@@ -21,11 +21,13 @@ function App() {
       { name: "Max", age: 30 },
       { name: "Jonas", age: 31 },
     ],
-
-    otherState: "Some other value",
+    // otherState: "Some other value",
   });
-
   console.log(personsState);
+
+  const [otherState, setOtherState] = useState({
+    title: "Normal State",
+  });
 
   const switchNameHandler = () => {
     setPersonsState({
@@ -34,8 +36,13 @@ function App() {
         { name: "Maximillian", age: 30 },
         { name: "Jonas", age: 31 },
       ],
+      // otherState: "Updated state",
+    });
+  };
 
-      otherState: "Some other value",
+  const switchUpdateHandler = () => {
+    setOtherState({
+      title: "Updated State",
     });
   };
 
@@ -92,6 +99,10 @@ function App() {
       <Person
         name={personsState.persons[2].name}
         age={personsState.persons[2].age}
+      />
+      <OtherPerson
+        otherState={otherState.title}
+        switchUpdateHandler={switchUpdateHandler}
       />
     </div>
   );
