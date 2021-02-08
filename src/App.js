@@ -1,6 +1,6 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 // import React from "react";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./App.css";
 
 // Components
@@ -12,7 +12,7 @@ import Person, { OtherPerson } from "./Person/Person";
 // import Video from "./components/TwitterState/Video";
 
 // Functional component
-
+/*
 function App() {
   // Learnt { useState } functional state from Maximilian
   const [personsState, setPersonsState] = useState({
@@ -45,9 +45,10 @@ function App() {
       title: "Updated State",
     });
   };
+*/
 
-  // Learnt state from DevEd
-  /*
+// Learnt state from DevEd
+/*
   const [counter, setCounter] = useState(0);
   const [toggle, setToggle] = useState(true);
 
@@ -64,51 +65,63 @@ function App() {
   };
 */
 
-  // Working with state
-  return (
-    <div className="App">
-      {/* These component used for learning state from DevEd */}
-      {/* <Nav toggle={toggle} />
-      <Video nr={counter} setToggle={toggler} />  */}
-      {/* This portion of code used for learning state from DevEd */}
-      {/* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
+// Working with state
+// return (
+// <div className="App">
+{
+  /* These component used for learning state from DevEd */
+}
+{
+  /* <Nav toggle={toggle} />
+      <Video nr={counter} setToggle={toggler} />  */
+}
+{
+  /* This portion of code used for learning state from DevEd */
+}
+{
+  /* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
       <button onClick={increment}>Click me to increment!</button>
       <button onClick={reset}>Reset</button>
-      <button onClick={toggler}>Click me!</button> */}
-      {/*       
+      <button onClick={toggler}>Click me!</button> */
+}
+{
+  /*       
       // These two components used for learning props from DevEd
         <div className="home">
           <Nav />
           <Tweets />
         </div>
-      */}
+      */
+}
 
-      {/* These components used for learning state from MAXIMILIAN */}
-      <h1>I am React App</h1>
-      <button onClick={switchNameHandler}>Update State!</button>
-      <Person
-        name={personsState.persons[0].name}
-        age={personsState.persons[0].age}
-      />
-      <Person
-        name={personsState.persons[1].name}
-        age={personsState.persons[1].age}
-      >
-        My Hobbies: Racing
-      </Person>
-      <Person
-        name={personsState.persons[2].name}
-        age={personsState.persons[2].age}
-      />
-      <OtherPerson
-        otherState={otherState.title}
-        switchUpdateHandler={switchUpdateHandler}
-      />
-    </div>
-  );
+{
+  /* These components used for learning state from MAXIMILIAN */
+}
+//     <h1>I am React App</h1>
+//     <button onClick={switchNameHandler}>Update State!</button>
+//     <Person
+//       name={personsState.persons[0].name}
+//       age={personsState.persons[0].age}
+//     />
+//     <Person
+//       name={personsState.persons[1].name}
+//       age={personsState.persons[1].age}
+//     >
+//       My Hobbies: Racing
+//     </Person>
+//     <Person
+//       name={personsState.persons[2].name}
+//       age={personsState.persons[2].age}
+//     />
+//     <OtherPerson
+//       otherState={otherState.title}
+//       switchUpdateHandler={switchUpdateHandler}
+//     />
+//   </div>
+// );
 
-  // Working with props
-  /*
+// Working with props
+/*
   return (
     <div className="App">
       <h1>Hello world!</h1>
@@ -124,20 +137,20 @@ function App() {
     </div>
   );
   */
-  // How JSX actually works
-  /*
+// How JSX actually works
+/*
     return React.createElement(
       "div",
       {className: App},
       React.createElement("h1", null, "Hi, I'm a React App")
     );
     */
-}
+// }
 
-export default App;
+// export default App;
 
 //************ */ CLASS BASED COMPONENT************
-/*
+
 class App extends Component {
   state = {
     persons: [
@@ -166,10 +179,8 @@ class App extends Component {
 
     // this.setState({ persons: [{ name: "Asif Newaz", age: 27 }, {undefined}, {undefined}] });
   };
-*/
 
-//Working with state
-/*
+  //Working with state
   render() {
     return (
       <div className="App">
@@ -177,6 +188,7 @@ class App extends Component {
         <p>This is really working!</p>
         <button onClick={this.switchNameHandler}>Update state!</button>
         <Person
+          click={this.switchNameHandler}
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
@@ -196,30 +208,29 @@ class App extends Component {
       </div>
     );
   }
-  */
-// Working with props
-// render() {
-//   return (
-//     <div className="App">
-//       <h1>Hello world!</h1>
-//       <p>This is really working!</p>
-//       <button>Switch Name</button>
-//       <Person name="Asif" age="26">
-//         <a href="#">Click Me!</a>
-//       </Person>
-//       <Person name="Max" age="30">
-//         My Hobbies: Racing
-//       </Person>
-//       <Person name="Jonas" age="31" />
-//     </div>
-//   );
+  // Working with props
+  // render() {
+  //   return (
+  //     <div className="App">
+  //       <h1>Hello world!</h1>
+  //       <p>This is really working!</p>
+  //       <button>Switch Name</button>
+  //       <Person name="Asif" age="26">
+  //         <a href="#">Click Me!</a>
+  //       </Person>
+  //       <Person name="Max" age="30">
+  //         My Hobbies: Racing
+  //       </Person>
+  //       <Person name="Jonas" age="31" />
+  //     </div>
+  //   );
 
-// How JSX actually works
-// return React.createElement(
-//   "div",
-//   {className: App},
-//   React.createElement("h1", null, "Hi, I'm a React App")
-// );
-// }
+  // How JSX actually works
+  // return React.createElement(
+  //   "div",
+  //   {className: App},
+  //   React.createElement("h1", null, "Hi, I'm a React App")
+  // );
+}
 
-// export default App;
+export default App;
