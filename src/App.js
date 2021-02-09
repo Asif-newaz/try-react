@@ -69,23 +69,19 @@ function App() {
 // return (
 // <div className="App">
 
-  /* These component used for learning state from DevEd */
+/* These component used for learning state from DevEd */
 
-
-  /* <Nav toggle={toggle} />
+/* <Nav toggle={toggle} />
       <Video nr={counter} setToggle={toggler} />  */
 
+/* This portion of code used for learning state from DevEd */
 
-  /* This portion of code used for learning state from DevEd */
-
-
-  /* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
+/* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
       <button onClick={increment}>Click me to increment!</button>
       <button onClick={reset}>Reset</button>
       <button onClick={toggler}>Click me!</button> */
 
-
-  /*       
+/*       
       // These two components used for learning props from DevEd
         <div className="home">
           <Nav />
@@ -93,9 +89,7 @@ function App() {
         </div>
       */
 
-
-
-  /* These components used for learning state from MAXIMILIAN */
+/* These components used for learning state from MAXIMILIAN */
 
 //     <h1>I am React App</h1>
 //     <button onClick={switchNameHandler}>Update State!</button>
@@ -164,12 +158,12 @@ class App extends Component {
     country: "Bangladesh is my homeland",
   };
 
-  switchNameHandler = () => {
+  switchNameHandler = (newName) => {
     console.log("was clicked!");
     //DON'T DO THIS: this.state.persons[1].name = "Asif Newaz";
     this.setState({
       persons: [
-        { name: "Asif Newaz", age: 27 },
+        { name: newName, age: 27 },
         { name: "Max", age: 30 },
         { name: "Jonas", age: 32 },
       ],
@@ -186,9 +180,10 @@ class App extends Component {
       <div className="App">
         <h1>Hello world!</h1>
         <p>This is really working!</p>
-        <button onClick={this.switchNameHandler}>Update state!</button>
+        <button onClick={() => this.switchNameHandler ('Asif Newaz!!!')}>
+          Update state!
+        </button>
         <Person
-          click={this.switchNameHandler}
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
@@ -197,6 +192,7 @@ class App extends Component {
         <Person
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
+          click={this.switchNameHandler.bind(this, 'Asif!!')}
         >
           My Hobbies: Racing
         </Person>
