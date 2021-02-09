@@ -68,23 +68,23 @@ function App() {
 // Working with state
 // return (
 // <div className="App">
-{
+
   /* These component used for learning state from DevEd */
-}
-{
+
+
   /* <Nav toggle={toggle} />
       <Video nr={counter} setToggle={toggler} />  */
-}
-{
+
+
   /* This portion of code used for learning state from DevEd */
-}
-{
+
+
   /* <h1 className={toggle ? "active" : ""}>Counter {counter}</h1>
       <button onClick={increment}>Click me to increment!</button>
       <button onClick={reset}>Reset</button>
       <button onClick={toggler}>Click me!</button> */
-}
-{
+
+
   /*       
       // These two components used for learning props from DevEd
         <div className="home">
@@ -92,11 +92,11 @@ function App() {
           <Tweets />
         </div>
       */
-}
 
-{
+
+
   /* These components used for learning state from MAXIMILIAN */
-}
+
 //     <h1>I am React App</h1>
 //     <button onClick={switchNameHandler}>Update State!</button>
 //     <Person
@@ -192,7 +192,7 @@ class App extends Component {
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
-          <a href="#">Click Me!</a>
+          <a href="/">Click Me!</a>
         </Person>
         <Person
           name={this.state.persons[1].name}
