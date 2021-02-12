@@ -1,3 +1,4 @@
+// import { red } from "@material-ui/core/colors";
 import React, { Component } from "react";
 // import React from "react";
 // import React, { useState } from "react";
@@ -188,18 +189,39 @@ class App extends Component {
 
   //Working with state
   render() {
+    const style = {
+      backgroundColor: "crimson",
+      font: "inherit",
+      color: '#fff',
+      border: "1px solid purple",
+      borderRadius: '4px',
+      padding: "8px",
+      cursor: "pointer",
+    };
+
+    const headingStyle = {
+      font: "inherit",
+      color: '#fff',
+      border: "1px solid purple",
+      borderRadius: '4px',
+      padding: "8px",
+    }
+
+
     return (
       <div className="App">
-        <h1>Hello world!</h1>
+        <h1 style={headingStyle}>Hello world!</h1>
         <p>This is really working!</p>
-        <button onClick={() => this.switchNameHandler("Asif Newaz!!!")}>
+        <button
+          style={style}
+          onClick={() => this.switchNameHandler("Asif Newaz!!!")}
+        >
           Update state!
         </button>
         <Person
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
         >
-          <a href="/">Click Me!</a>
         </Person>
         <Person
           name={this.state.persons[1].name}
